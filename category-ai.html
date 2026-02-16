@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AI Applications Portfolio | Laiba Jawaid</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="stylesheet" href="assets/css/category-style.css">
+</head>
+<body class="category-page">
+
+    <div class="back-btn-container">
+        <div class="container-fluid">
+            <a href="index.html#portfolio" class="back-to-home">
+                <i class="ti-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <nav class="custom-navbar affix">
+        <div class="container">
+            <a class="logo calligraphy" href="index.html">Laiba Jawaid</a>
+        </div>
+    </nav>
+
+    <header class="category-header text-center">
+        <div class="container">
+            <h2 class="section-title">AI Applications</h2>
+            <p class="section-subtitle">Transforming Ideas into Intelligent Automated Solutions</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="project-item clickable-panel featured-item">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="fab fa-whatsapp project-icon"></i>
+                    <h4>WhatsApp Automation & AI Background Remover</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/whatsapp_automation_ss.png" class="img-fluid rounded shadow-sm" alt="WhatsApp Automation">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Streamlit-based Automation Tool</h5>
+                        <p>A dual-purpose app that automates bulk WhatsApp messaging via Excel files and performs AI-powered image background removal using the 'rembg' library.</p>
+                        <div class="tech-stack-badges">
+                            <span>Streamlit</span> <span>PyWhatKit</span> <span>Rembg</span> <span>OpenCV</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Whatsapp-Automation-App-" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="fab fa-discord project-icon"></i>
+                    <h4>RAG-Based Guidance Discord Bot</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/discord_bot_ss.png" class="img-fluid rounded shadow-sm" alt="Discord Bot">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Retrieval-Augmented Generation (RAG)</h5>
+                        <p>A sophisticated bot using Llama 3.2 and BGE-M3 embeddings to answer historical and biographical questions with strict accuracy guardrails.</p>
+                        <div class="tech-stack-badges">
+                            <span>Ollama</span> <span>Llama 3.2</span> <span>Vector DB</span> <span>Discord.py</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Discord-BOT" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> View Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-user project-icon"></i>
+                    <h4>AI-Powered Student Management System</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/student_mgmt_ss.png" class="img-fluid rounded shadow-sm" alt="Management System">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Analytics & Data Visualization</h5>
+                        <p>Web-based system with a FastAPI backend and Firebase storage. Features interactive dashboards built with Plotly Dash for student performance analytics.</p>
+                        <div class="tech-stack-badges">
+                            <span>FastAPI</span> <span>Firebase</span> <span>Plotly</span> <span>Bootstrap</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Student-Management-System" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-face-smile project-icon"></i>
+                    <h4>Face Recognition Attendance System</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/face_recognition_ss.png" class="img-fluid rounded shadow-sm" alt="Attendance System">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Computer Vision & Deep Learning</h5>
+                        <p>Workplace attendance system using FaceNet (512-D embeddings) and OpenCV. Includes a Flask interface and SQLite backend for biometric data storage.</p>
+                        <div class="tech-stack-badges">
+                            <span>OpenCV</span> <span>FaceNet</span> <span>Flask</span> <span>SQLite3</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Workplace-Attendance-System" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> View Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/category-logic.js"></script>
+</body>
+</html>

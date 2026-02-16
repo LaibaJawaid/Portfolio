@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Web & Desktop Apps | Laiba Jawaid</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="stylesheet" href="assets/css/category-style.css">
+</head>
+<body class="category-page">
+
+    <div class="back-btn-container">
+        <div class="container-fluid">
+            <a href="index.html#portfolio" class="back-to-home">
+                <i class="ti-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <nav class="custom-navbar affix">
+        <div class="container">
+            <a class="logo calligraphy" href="index.html">Laiba Jawaid</a>
+        </div>
+    </nav>
+
+    <header class="category-header text-center">
+        <div class="container">
+            <h2 class="section-title">Web & Desktop Apps</h2>
+            <p class="section-subtitle">Scalable Web Frameworks & Interactive User Interfaces</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="project-item clickable-panel featured-item">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-layout-grid2 project-icon"></i>
+                    <h4>Workplace Attendance System (Face-ID)</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/face_recognition_ss.png" class="img-fluid rounded shadow-sm" alt="Attendance System">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Full-Stack Flask Application</h5>
+                        <p>A face recognition–based attendance system built using Flask and OpenCV. Features include employee enrollment with multiple angles and an SQLite backend for managing 512-D FaceNet embeddings.</p>
+                        <div class="tech-stack-badges">
+                            <span>Flask</span> <span>OpenCV</span> <span>SQLite3</span> <span>Deep Learning</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Workplace-Attendance-System" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-user project-icon"></i>
+                    <h4>Student/Teacher Management Portal</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/student_mgmt_ss.png" class="img-fluid rounded shadow-sm" alt="Management System">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Modern Web App with Cloud Storage</h5>
+                        <p>A web-based system featuring a modern UI built with HTML/CSS/JS. It utilizes a FastAPI backend for high performance and Firebase for real-time data storage and student analytics.</p>
+                        <div class="tech-stack-badges">
+                            <span>FastAPI</span> <span>Firebase</span> <span>JavaScript</span> <span>Plotly Dash</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Student-Management-System" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-world project-icon"></i>
+                    <h4>Hidayah - Comprehensive Islamic App</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/hidayah_ss.png" class="img-fluid rounded shadow-sm" alt="Hidayah App">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Streamlit Web Solution</h5>
+                        <p>A multi-page application integrating Quranic APIs, Hadith libraries, and live prayer timings. Focused on providing a clean, accessible interface for global users.</p>
+                        <div class="tech-stack-badges">
+                            <span>Streamlit</span> <span>REST APIs</span> <span>Pandas</span> <span>Python</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/My-Hidayah-App-on-Streamlit-" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-pencil-alt project-icon"></i>
+                    <h4>MNIST Digit Recognition Suite</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/mnist_ss.png" class="img-fluid rounded shadow-sm" alt="MNIST Suite">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Deep Learning Interactive Suite</h5>
+                        <p>Features a Digit Detector and a Digit Arithmetic Calculator. Built with a CNN Keras model achieving 98-99% accuracy, deployed via Streamlit for real-time handwriting recognition.</p>
+                        <div class="tech-stack-badges">
+                            <span>Keras</span> <span>TensorFlow</span> <span>Streamlit</span> <span>CNN</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/MNIST-Dataset-explore" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/category-logic.js"></script>
+</body>
+</html>

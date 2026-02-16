@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>API Development & Backend | Laiba Jawaid</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="stylesheet" href="assets/css/category-style.css">
+</head>
+<body class="category-page">
+
+    <div class="back-btn-container">
+        <div class="container-fluid">
+            <a href="index.html#portfolio" class="back-to-home">
+                <i class="ti-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <nav class="custom-navbar affix">
+        <div class="container">
+            <a class="logo calligraphy" href="index.html">Laiba Jawaid</a>
+        </div>
+    </nav>
+
+    <header class="category-header text-center">
+        <div class="container">
+            <h2 class="section-title">API & Backend Development</h2>
+            <p class="section-subtitle">Building High-Performance Endpoints & Data Bridges</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="project-item clickable-panel featured-item">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-bolt project-icon"></i>
+                    <h4>Student Portal API Endpoints (FastAPI)</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/fastapi_logic.png" class="img-fluid rounded shadow-sm" alt="FastAPI Backend">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>High-Performance Backend Logic</h5>
+                        <p>Implemented robust RESTful API endpoints using FastAPI for the Student Management System. Optimized for speed and asynchronous data handling, connecting the front-end directly with a Firebase real-time database.</p>
+                        <div class="tech-stack-badges">
+                            <span>FastAPI</span> <span>REST API</span> <span>Asynchronous Python</span> <span>Firebase</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Student-Management-System" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> View Backend Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-link project-icon"></i>
+                    <h4>Face-Recognition Attendance API (Flask)</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/flask_routes.png" class="img-fluid rounded shadow-sm" alt="Flask Backend">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Biometric Data Integration Routes</h5>
+                        <p>Developed server-side routing in Flask to handle biometric face embeddings (512-D). Managed API responses for real-time attendance marking and database CRUD operations with SQLite.</p>
+                        <div class="tech-stack-badges">
+                            <span>Flask</span> <span>API Routing</span> <span>SQLite3</span> <span>JSON handling</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Workplace-Attendance-System" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> View Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="small text-muted italic">More APIs, Web Scraping, and C++ (Qt) modules coming soon...</p>
+        </div>
+    </main>
+
+    <script src="assets/js/category-logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Data Science & AI Portfolio | Laiba Jawaid</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="stylesheet" href="assets/css/category-style.css">
+</head>
+<body class="category-page">
+
+    <nav class="custom-navbar affix">
+        <div class="container">
+            <a class="logo calligraphy" href="index.html">Laiba Jawaid</a>
+        </div>
+    </nav>
+    <!--Back btn-->
+                      <div class="back-btn-container">
+    <div class="container-fluid">
+        <a href="index.html#portfolio" class="back-to-home">
+            <i class="ti-arrow-left"></i> Back to Portfolio
+        </a>
+    </div>
+</div>
+
+    <header class="category-header text-center">
+        <div class="container">
+            <h2 class="section-title">Data Analysis and Engineering</h2>
+            <p class="section-subtitle">Extracting Actionable Intelligence from Raw Data</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+    
+        <div class="project-item clickable-panel featured-item">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-home project-icon"></i>
+                    <h4>Hotel Reservation Churn Prediction</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/hotel_booking_ss.png" class="img-fluid rounded shadow-sm" alt="Hotel Booking">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Advanced Stratified Sampling & Analysis</h5>
+                        <p>Analyzed booking cancellations using stratified sampling techniques (Hotel type, Booking status, Customer type). Created heatmaps for room preferences and comparative distribution charts.</p>
+                        <div class="tech-stack-badges">
+                            <span>Python</span> <span>Stratified Sampling</span> <span>Matplotlib</span> <span>Seaborn</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Hotel-Booking-dataset" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-shopping-cart project-icon"></i>
+                    <h4>E-commerce Customer Spending Analysis</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/ecommerce_spending_ss.png" class="img-fluid rounded shadow-sm" alt="E-commerce Analysis">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Business Intelligence & Statistical Insights</h5>
+                        <p>Extracted actionable intelligence regarding customer behavior and revenue trends. Includes multivariate relationship exploration using Seaborn and statistical reporting with NumPy.</p>
+                        <div class="tech-stack-badges">
+                            <span>Pandas</span> <span>NumPy</span> <span>Seaborn</span> <span>Business Reporting</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Customer-Spending-Analysis" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-pie-chart project-icon"></i>
+                    <h4>Segmentation, Forecasting & Dashboard</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/internship_task2_ss.png" class="img-fluid rounded shadow-sm" alt="Data Science Tasks">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>K-Means Clustering & Time Series (ARIMA)</h5>
+                        <p>Unsupervised learning for customer segments (K-Means) and energy consumption forecasting. Developed a fully interactive Streamlit dashboard for business KPIs using Plotly.</p>
+                        <div class="tech-stack-badges">
+                            <span>Scikit-learn</span> <span>Streamlit</span> <span>ARIMA</span> <span>Plotly</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/DataScience-Internship-Tasks-Part-II" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-shield project-icon"></i>
+                    <h4>Predictive Modeling: Loan & Risk</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/ml_intern_ss.png" class="img-fluid rounded shadow-sm" alt="ML Internship">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Multiple Classification & Regression Models</h5>
+                        <p>End-to-end ML tasks: Credit risk (Logistic Regression), Bank churn (Decision Trees), and Insurance claim amount prediction (Linear Regression) with evaluation metrics.</p>
+                        <div class="tech-stack-badges">
+                            <span>Random Forest</span> <span>Logistic Regression</span> <span>EDA</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/Data-Science-and-Machine-Learning-Internship" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item clickable-panel">
+            <div class="project-header" onclick="toggleProject(this)">
+                <div class="header-left">
+                    <i class="ti-layout-grid3 project-icon"></i>
+                    <h4>ETL & Master Data handling (120k+)</h4>
+                </div>
+                <i class="ti-angle-down arrow"></i>
+            </div>
+            <div class="project-details">
+                <div class="details-inner row">
+                    <div class="col-md-4">
+                        <img src="assets/imgs/excel_cleaning_ss.png" class="img-fluid rounded shadow-sm" alt="Data Analyst Work">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>ETL, Power Query & SQL Joins</h5>
+                        <p>Handled real-world corporate data (Excelerate). Performed massive data cleaning, created master tables with 50+ features, and implemented complex PostgreSQL joins for multi-cohort analysis.</p>
+                        <div class="tech-stack-badges">
+                            <span>PostgreSQL</span> <span>ETL</span> <span>Power BI</span> <span>Excel</span>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://github.com/LaibaJawaid/DataAnalyst-Internship-Excelerate" target="_blank" class="btn btn-dark btn-sm"><i class="fab fa-github"></i> GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="assets/js/category-logic.js"></script>
+</body>
+</html>
