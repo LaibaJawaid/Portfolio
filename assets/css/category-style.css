@@ -1,0 +1,196 @@
+/* --- Category Page Base- Islamic Projects --- */
+.category-page {
+    /* Same background as main page */
+    background-color: #f2f0f7;
+    background-image: 
+        radial-gradient(rgba(141, 98, 242, 0.3) 1.5px, transparent 1.5px),
+        repeating-radial-gradient(circle at 0% 100%, transparent 0%, transparent 40px, rgba(115, 70, 220, 0.06) 40px, rgba(130, 87, 230, 0.06) 41px);
+    background-size: 30px 30px, 100% 100%;
+}
+
+.category-header {
+    text-align: center;
+    position: relative;
+     padding: 120px 0 40px;
+     }
+
+/* --- Project Accordion Panels --- */
+.project-item {
+    /* Increased purple intensity and shifted stops */
+  background: linear-gradient(135deg, #f1efff 0%, #d8d1ff 100%) !important; 
+  border-radius: 20px;
+  margin-bottom: 20px;
+  /* Stronger shadow to match deeper colors */
+  box-shadow: 0 8px 20px rgba(86, 73, 135, 0.08); 
+  overflow: hidden;
+  transition: all 0.3s ease;
+  /* Darker border for definition */
+  border: 1px solid rgba(105, 90, 166, 0.4);
+}
+
+.project-header {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-left { display: flex; align-items: center; gap: 20px; }
+.project-icon { font-size: 24px; color: #554985; }
+.project-header h4 { margin: 0; font-size: 18px; color: #3b2a82; }
+
+.arrow { transition: transform 0.3s ease; color: #695aa6; }
+
+/* Expand/Collapse Logic */
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.project-item.active .project-details { max-height: 800px; }
+.project-item.active .arrow { transform: rotate(180deg); }
+
+.details-inner { padding: 30px; }
+
+/* Badges for tech stack */
+.tech-stack-badges span {
+    background: rgba(105, 90, 166, 0.1);
+    color: #695aa6;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+/* --- Featured DS Project Highlight --- */
+/* --- Unified Project Panels: Border + Right Gradient for ALL --- */
+.project-item {
+    /* Base background White + Right-side Purple Gradient */
+    background: #ffffff linear-gradient(to left, rgba(105, 90, 166, 0.15) 0%, transparent 40%) !important;
+    
+    /* Strong Purple Border for ALL panels as requested */
+    border: 2px solid #695aa6 !important; 
+    
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Uniform shadow for depth */
+    box-shadow: 0 8px 20px rgba(105, 90, 166, 0.1);
+}
+
+/* Hover effect: Glow aur Shadow dono barhengi */
+.project-item:hover {
+    transform: translateY(-8px);
+    background: #ffffff linear-gradient(to left, rgba(105, 90, 166, 0.25) 0%, transparent 50%) !important;
+    box-shadow: 0 15px 40px rgba(105, 90, 166, 0.25) !important;
+    /* Border hover pe thora aur dark ho jayega */
+    border-color: #3b2a82 !important; 
+}
+
+/* Icons color consistency */
+.project-icon {
+    color: #3b2a82 !important;
+}
+
+/* Arrow consistency */
+.arrow {
+    color: #695aa6 !important;
+}
+
+/* Featured Item (Data Science): Iska gradient thora zyada deep rakha hai */
+/* --- FIXED: Featured Item (First Project) Highlight + Side Gradient --- */
+.project-item.featured-item {
+    /* Dono cheezon ka mix: Halka sa center tint aur right-side deep gradient */
+    background: #ffffff linear-gradient(to left, rgba(105, 90, 166, 0.25) 0%, rgba(241, 239, 255, 0.4) 50%, transparent 80%) !important;
+    
+    /* Highlighted border */
+    border: 3px solid #695aa6 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Featured item ke liye thora extra glow shadow */
+.project-item.featured-item:hover {
+    box-shadow: 0 15px 45px rgba(105, 90, 166, 0.3) !important;
+}
+
+
+/* Hover lift and purple glow */
+
+/* --- Proper Back Button Positioning --- */
+.back-btn-container {
+    padding-top: 100px; /* Navbar ke neeche laane ke liye */
+    padding-left: 5%;
+    position: absolute; /* Header ke upar overlay hoga */
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.back-to-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+    color: #695aa6; /* Aapka Theme Purple */
+    font-weight: 700;
+    font-size: 15px;
+    padding: 8px 15px;
+    border-radius: 12px;
+    background: rgba(80, 67, 134, 0.09); /* Soft Purple Tint */
+    border: 1px solid rgba(80, 69, 128, 0.5);
+    transition: all 0.3s ease;
+}
+
+.back-to-home i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect: Arrow move karegi */
+.back-to-home:hover {
+    background: #695aa6;
+    color: #ffffff !important;
+    box-shadow: 0 5px 15px rgba(105, 90, 166, 0.2);
+    transform: translateX(-5px);
+}
+
+.back-to-home:hover i {
+    transform: translateX(-3px);
+}
+
+/* Mobile responsive alignment */
+@media (max-width: 768px) {
+    .back-btn-container {
+        position: relative;
+        padding-top: 80px;
+        padding-left: 20px;
+    }
+}
+
+/* All - categories ki common styling */
+
+/* --- Category Headers inside Master Page --- */
+.category-divider {
+    font-family: 'Baloo Paaji', cursive;
+    color: #3b2a82;
+    font-size: 1.5rem;
+    border-left: 5px solid #695aa6;
+    padding-left: 15px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Featured item on master page keeps the glow */
+.project-item.featured-item {
+    border: 1px solid #695aa6 !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f7f5ff 100%) !important;
+    box-shadow: 0 10px 30px rgba(105, 90, 166, 0.15) !important;
+}
