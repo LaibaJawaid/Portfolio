@@ -102,6 +102,15 @@ body {
     background-position: center center;
 }
 
+/* --- HEADER BACKGROUND IMAGE POSITION --- */
+@media (max-width: 768px) {
+    .header {
+        background-position: center 20% !important; /* Image ko upar se adjust karega */
+        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    }
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
@@ -11713,6 +11722,21 @@ pre .code {
   }
 }
 
+/* Screen size 991px se neeche (Phones/Tablets) */
+@media (max-width: 991.98px) {
+    .logo.calligraphy {
+        font-size: 24px !important; /* Phone pe size chota kar diya */
+        padding-left: 15px; /* Side se thora gap taake chipkay na */
+    }
+    
+    /* Navbar container ko batana ke logo aur hamburger alag konon mein rahen */
+    .custom-navbar .container {
+        justify-content: space-between !important;
+        min-height: 70px !important; /* Height kam kar di */
+        padding: 0 10px !important;
+    }
+}
+
 .custom-navbar .hamburger {
   margin-left: 20px;
   padding-top: 5px;
@@ -12248,29 +12272,62 @@ pre .code {
   }
 }
 
+/* --- HEADER CONTENT CENTERING & TEXT FIX --- */
+
+/* Base setting for mobile centering */
+@media (max-width: 768px) {
+    .header-content {
+        max-width: 100% !important;
+        padding: 0 20px !important;
+        text-align: center !important; /* Poora text center ho jayega */
+        margin-left: 0 !important; /* Purana shift hata diya */
+    }
+
+    /* Name logic: Aik line mein lane ke liye size adjust kiya */
+    .header .header-content .header-title .down {
+        font-size: 32px !important; /* Chota size taake wrap na ho */
+        display: block;
+        width: 100%;
+    }
+
+    /* Subtitle (ML Engineer etc) */
+    .header .header-content .header-subtitle {
+        font-size: 16px !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* Buttons ko mobile pe center mein stack karna */
+    .header-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .header-btns .btn {
+        width: 200px; /* Standard width for phones */
+        margin-right: 0 !important; /* Purana laptop wala margin khatam */
+    }
+}
 /* --- Calligraphy Logo --- */
 /* Base Logo Style */
 .logo.calligraphy {
     font-family: 'Great Vibes', cursive !important;
-    font-size: 32px !important;
     font-weight: 500 !important;
-    color: #ffffff !important; /* Initial White */
-    letter-spacing: 1px;
+    color: #ffffff !important;
     font-style: italic;
-    position: fixed; /* Keep it visible while scrolling */
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    transition: color 0.4s ease; /* Smooth color change */
     text-decoration: none;
-    margin-left: 60px;
+    transition: all 0.4s ease;
+    z-index: 1001;
+    /* Laptop default settings */
+    font-size: 40px !important;
+    margin-left: 0 !important; /* Fixed: Purana 60px margin hata diya */
 }
 
 /* Color when over white sections */
 .logo.calligraphy.scrolled {
     color: #3b2a82 !important; /* Dark Purple */
 }
-
 
 .about {
   display: -webkit-box;
@@ -12313,12 +12370,30 @@ pre .code {
     text-align: center;
   }
   .about-img-holder {
-    max-width: 220px;
     min-width: 100%;
     width: 100%;
-    margin: auto;
     margin-bottom: 20px;
+      max-width: 75% !important; /* Image ko thora chota kiya taake decent lage */
+        margin: 0 auto 30px auto !important; /* Perfectly center kar dega */
+        display: flex;
+        justify-content: center;
   }
+  .about-img-holder {
+        max-width: 75% !important; /* Image ko thora chota kiya taake decent lage */
+        margin: 0 auto 30px auto !important; /* Perfectly center kar dega */
+        display: flex;
+        justify-content: center;
+    }
+    
+    .about-caption {
+        padding: 0 15px !important; /* Text ko sides se thora gap diya */
+    }
+    
+    .about-caption p {
+        font-size: 15px !important;
+        text-align: center !important;
+        line-height: 1.6; /* Lines ke darmiyan thora fasla taake parhna asan ho */
+    }
 }
 
 /* sections */
@@ -12423,7 +12498,7 @@ pre .code {
    ========================================= */
 
 /* Skill Logos Container */
-.skill-logos {
+/* .skill-logos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     gap: 20px;
@@ -12470,13 +12545,13 @@ pre .code {
     line-height: 1.3;
 }
 
-/* Featured Panel keeps the purple accent */
+/* Featured Panel keeps the purple accent 
 .featured-panel .skill-logo-item:hover {
     border-color: #695aa6;
     background: linear-gradient(145deg, #ffffff 0%, #f9f8ff 100%);
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments 
 @media (max-width: 768px) {
     .skill-logos {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -12494,7 +12569,7 @@ pre .code {
     }
 }
 
-/* Main Panel Style */
+/* Main Panel Style 
 .skill-panel {
     background: #fff;
     padding: 30px;
@@ -12505,12 +12580,12 @@ pre .code {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* Featured Data Science Panel (The Strength) */
+/* Featured Data Science Panel (The Strength) 
 .featured-panel {
-    border: 2px solid #695aa6; /* Aapka Theme Purple */
+    border: 2px solid #695aa6; /* Aapka Theme Purple 
     background: linear-gradient(145deg, #ffffff 0%, #f9f8ff 100%);
     box-shadow: 0 15px 35px rgba(105, 90, 166, 0.15);
-    transform: scale(1.02); /* Thora bara aur focus dikhane ke liye */
+    transform: scale(1.02); /* Thora bara aur focus dikhane ke liye 
 }
 
 .featured-panel .panel-header h4 {
@@ -12520,146 +12595,146 @@ pre .code {
 
 .featured-panel .fill {
     background: linear-gradient(90deg, #695aa6, #a855f7) !important;
+} */
+
+
+/* =========================================
+   UNIFIED SKILLS SECTION - FIXED BOXES
+   ========================================= */
+
+/* 1. Main Panel Layout */
+.skill-panel {
+  /* Background ko mazeed light kiya gaya hai */
+    background: linear-gradient(120deg, #ffffff 0%, #f7f5ff 100%) !important;
+    border: 1px solid rgba(105, 90, 166, 0.05) !important;
+    border-radius: 25px !important;
+    padding: 25px !important;
+    box-shadow: 0 10px 30px rgba(105, 90, 166, 0.12) !important;
+    height: 100% !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Header Inside Panel */
-.panel-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
+.skill-panel:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(105, 90, 166, 0.2) !important;
 }
 
-.panel-header i {
-    font-size: 28px;
+/* 2. Horizontal Logos Container */
+/* 1. Skill Logos Container update */
+.skill-logos {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important; /* Gap thora kam kiya */
+    justify-content: flex-start;
+}
+
+/* 2. Item width adjustment for 4-in-a-row */
+.skill-logo-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    /* 100% width container mein 4 icons lane ke liye calculation */
+    width: calc(25% - 12px) !important; 
+    min-width: 80px !important; /* Mobile pe kharab na ho */
+    min-height: 90px !important;
+    padding: 10px !important;
+    background: #ffffff !important;
+    border: 1px solid #eee !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.skill-logo-item:hover {
+    transform: scale(1.05);
+    border-color: #695aa6 !important;
+}
+
+/* Fly.io ya kisi bhi logo ko box ke andar rakhne ke liye */
+.skill-logo-item img {
+    max-width: 80% !important; /* Box se bahar na jaye */
+    max-height: 40px !important;
+    object-fit: contain !important; /* Aspect ratio kharab nahi hoga */
+    margin-bottom: 8px;
+}
+
+
+.skill-logo-item img, .skill-logo-item i {
+    height: 35px !important;
+    font-size: 32px !important;
+    margin-bottom: 8px;
     color: #695aa6;
 }
 
-.panel-header h4 {
-    margin: 0;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Individual Skill Items */
-.skill-item {
-    margin-bottom: 15px;
-}
-
-.skill-item span {
-    display: block;
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 5px;
+.skill-logo-item span {
+    font-size: 11px !important;
+    font-weight: 700;
     color: #444;
 }
 
-/* Progress Bars */
-.skill-item .bar {
-    width: 100%;
-    height: 8px;
-    background: #e9ecef;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.skill-item .fill {
-    height: 100%;
-    background: #ffefff; /* Normal panels color */
-    border-radius: 10px;
-    transition: width 1s ease-in-out;
-}
-
-/* Hover Effect for all panels */
-.skill-panel:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
 /* =========================================
-   2. UNIFIED PANEL STYLING (Tinted & Shadowed)
+   FEATURED PANEL SPECIAL (Data Science)
    ========================================= */
-
-.skill-panel {
-    background: linear-gradient(120deg, #fdfbfd 0%, #f1efff 100%) !important;
-    border-radius: 25px !important;
-    box-shadow: 0 10px 30px rgba(105, 90, 166, 0.12) !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(105, 90, 166, 0.1) !important;
-}
-/* 2. Left Side Panels Fix */
-/* Bootstrap ki grid mein 'col-lg-6' ke pehle dabbo ko target karte hain */
-/* Hum iska angle reverse (-135deg) kar denge taake gradient left side se start ho */
-.row > div:nth-child(odd) .skill-panel {
-    background: linear-gradient(-120deg, #fdfbfd 0%, #f1efff 100%) !important;
-}
-
-/* =========================================
-   3. HIGHLIGHTED PANEL (Data Science Only)
-   ========================================= */
-
-/* Data Science panel ko color wahi diya hai, lekin iska BORDER aur GLOW isse highlight karega */
+/* 3. Typo Fix in Featured Panel */
 .featured-panel {
-    border: 3px solid rebeccapurple !important; /* Thick Purple Border sirf ispe */
-    position: relative;
-    z-index: 1;
+    /* Taqreeban White background bilkul halke purple tone ke sath */
+    background: linear-gradient(60deg, #ffffff 150%, #f4f1ff 60%) !important; 
+    
+    /* Solid Dark Purple Border */
+    border: 2px solid darkslateblue !important; 
+    
+    border-radius: 25px !important;
+    padding: 25px !important;
+    display: flex;
+    flex-direction: column; 
+    position: relative !important; 
+    z-index: 1; /* Glow ko peeche rakhne ke liye zaroori hai */
 }
 
-/* Is panel ke piche ek purple glow effect (Jaisa aapne manga) */
+/* Featured Panel Glow */
 .featured-panel::after {
     content: '';
     position: absolute;
-    inset: -2px;
+    inset: -3px;
     z-index: -1;
     background: linear-gradient(45deg, #695aa6, #a855f7);
-    border-radius: 27px;
-    filter: blur(10px);
-    opacity: 0.15;
-}
- /*========================================================================== */
- 
-/* Portfolio section styling */
-/* --- Custom Portfolio Dark Purple Titles --- */
-.dark-purple-title {
-    color: #3b2a82 !important; /* Rich Dark Purple */
-    font-weight: 500 !important;
-    text-shadow: 1px 1px 1px rgba(255,255,255,0.5); /* Contrast better karne ke liye */
-    margin-bottom: 20px !important;
+    border-radius: 28px;
+    filter: blur(12px);
+    opacity: 0.2;
 }
 
-/* --- Action Buttons Styling (Reference Image 8e6bae.png) --- */
-.portfolio-action-btns {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+/* PURPLE BOXES for Featured Icons (Image Fix) */
+.featured-panel .skill-logo-item {
+    background: rgba(105, 90, 166, 0.08) !important; /* Light Purple Tint */
+    border: 1px solid rgba(105, 90, 166, 0.2) !important;
 }
 
-.p-btn-icon {
-    background-color: #493f75 !important; /* White Box */
-    color: #ffffff !important; /* Purple/Blue Icon color */
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px; /* Squircle shape as in image */
-    text-decoration: none !important;
-    border: none;
-    font-size: 18px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
+.featured-panel .skill-logo-item:hover {
+    background: rgba(105, 90, 166, 0.15) !important;
 }
 
-.p-btn-icon:hover {
-    background-color: #695aa2 !important;
-    transform: scale(1.1);
+/* 4. Learning Heading Fix */
+.learning-heading {
+    flex: 0 0 100% !important;
+    color: #888888;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 15px 0 10px 0 !important;
+    border-bottom: 1px solid rgba(105, 90, 166, 0.15);
+    padding-bottom: 5px;
 }
 
-/* Overlay adjustments */
-.portfolio-card-overlay {
-    background-color: rgba(105, 90, 166, 0.85) !important; /* Soft Purple Overlay */
+/* =========================================
+   FEATURED PANEL: LEARNING HEADING STRICTLY GREY
+   ========================================= */
+#skills .featured-panel .w-100 h6.learning-heading {
+    color: #888888 !important; 
+    border-bottom: 1px solid #cccccc !important; 
+    opacity: 1 !important; 
+    -webkit-text-fill-color: #888888 !important; /* Force text color overriding gradients */
 }
 
 /* =========================================
@@ -12790,9 +12865,13 @@ pre .code {
 
 /* Responsive adjustment */
 @media (max-width: 768px) {
-    .social-box { justify-content: center; }
+          .social-box { justify-content: center; 
+    justify-content: center !important;
+        max-width: 180px; /* Ye magic number 3 icons ke baad baqi ko neeche dhakel dega */
+        margin: 30px auto 0 auto !important; /* Box ko center mein lane ke liye */
+        gap: 15px; /* Icons ke darmiyan spacing */
 }
-
+}
 /* --- Footer Refined --- */
 .footer {
     background-color: #111111 !important;
@@ -12884,12 +12963,69 @@ pre .code {
 }
 
 /* Mobile Responsive */
-@media (max-width: 600px) {
+@media (max-width: px) {
     .cta-button-group {
         justify-content: center;
-        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap; /* Jagah kam hone pe items ko neeche shift karega */
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .cta-button-group .btn-hire-me {
+        width: 100%; /* Hire Me button poori width lega */
+        margin-bottom: 5px;
+    }
+    
+    .cta-button-group .btn-icon-only, 
+    .cta-button-group .s-icon {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .work-with-me-banner {
         text-align: center;
     }
+}
+
+
+/* =========================================
+   PORTFOLIO ACTION BUTTONS (RESTORED FIX)
+   ========================================= */
+.portfolio-action-btns {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.p-btn-icon {
+    background-color: #493f75 !important; /* Dark Purple Box */
+    color: #ffffff !important; /* White Icon */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; 
+    text-decoration: none !important;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.p-btn-icon:hover {
+    background-color: #695aa2 !important; /* Lighter Purple on Hover */
+    transform: scale(1.1);
+    color: #ffffff !important;
+}
+
+/* Overlay color adjustment just in case wo bhi delete ho gaya tha */
+.portfolio-card-overlay {
+    background-color: rgba(105, 90, 166, 0.85) !important; 
 }
